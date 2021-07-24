@@ -1,0 +1,38 @@
+import random #import random module
+
+frequence1 = 0 #counter   dice face equality 1 frequence1 
+frequence2 = 0 #counter   dice face equality 2 frequence2 
+frequence3 = 0 #counter   dice face equality 3 frequence3 
+frequence4 = 0 #counter   dice face equality 4 frequence4 
+frequence5 = 0 #counter   dice face equality 5 frequence5 
+frequence6 = 0 #counter   dice face equality 6 frequence6 
+
+
+random.seed(345) # generate same frequence
+
+
+for roll in range(6000000): # for rolling dice  6 million times
+    dice = random.randrange(1,7) # dice face thoroughout 1 to 6 
+    
+    #control statement each dice face 
+    if dice == 1:
+        frequence1 += 1
+    elif dice == 2:
+        frequence2 += 1
+    elif dice == 3:
+        frequence3 += 1
+    elif dice == 4:
+        frequence4 += 1
+    elif dice == 5:
+        frequence5 += 1
+    else:
+        frequence6 += 1
+
+#Print dice face and their frequences
+print(f'Dice{"Frequence" : >13}')
+print(f'{1 : > 4}{frequence1 : > 13}')
+print(f'{2 : > 4}{frequence2 : > 13}')
+print(f'{3 : > 4}{frequence3 : > 13}')
+print(f'{4 : > 4}{frequence4 : > 13}')
+print(f'{5 : > 4}{frequence5 : > 13}')
+print(f'{6 : > 4}{frequence6 : > 13}')
