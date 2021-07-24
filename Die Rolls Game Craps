@@ -1,0 +1,48 @@
+import random
+
+
+def roll_dice():
+    """     Roll two dice and return their face values as a tuple.    """
+    dice1 = random.randrange(1,7)
+    dice2 = random.randrange(1,7)
+    return (dice1, dice2)
+
+def display_dice(dice):
+    """     Display one roll of the two dice.     """
+    dice1, dice2 = dice
+    print(f"Player rolled {dice1} + {dice2} = {sum(dice)}")
+
+
+Die_Values = roll_dice()
+display_dice(Die_Values)
+
+#Determine game tatus and point, based on first roll
+
+Sum_Of_Dice = sum(Die_Values)
+
+if Sum_Of_Dice in (7, 11):#Win
+    Game_Status = "Won"
+elif Sum_Of_Dice in (2, 3, 12):#Lose
+    Game_Status = "Lost"
+else:#Remember point
+    Game_Status = "CONTİNUE"
+    My_Point = Sum_Of_Dice
+    print(f"Point İs, {My_Point}")
+
+#Continue rolling until player win or loses
+while Game_Status == 'CONTİNUE':
+    Die_Values = roll_dice()
+    display_dice(Die_Values)
+    Sum_Of_Dice = sum(Die_Values)
+
+    if Sum_Of_Dice == My_Point: #Win by making point
+        Game_Status = "Won"
+    elif Sum_Of_Dice == 7: #lose by rolling 7
+        Game_Status = "Lost"
+
+
+#Displays win or loses message
+if Game_Status == "Won":
+    print("Player Wins")
+else:
+    print("Player Loses")
