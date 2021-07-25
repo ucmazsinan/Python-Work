@@ -28,3 +28,61 @@ while Answer != 'N': # Check the loop
                 Answer =  input("Do you want to play again (Y/N):")
 
 print("Thanks for playing....") # end message
+
+
+----------------------------------------------------------------------------
+
+import random 
+
+RN = random.randrange(1,1000) # Generate between 1 to 1000
+
+GuessNumber = int(input("Guess to number: ")) # Number of Guess
+
+Answer = 'Y' # Answer 
+
+counter = 0
+
+while Answer != 'N': # Check the loop
+    GuessNumber = int(input("Guess to number: ")) # Answer Number of guess
+
+    if GuessNumber > RN: # check whether greater than Guess Number Random number
+        print(f"Your Guess Number Bigger than RN: {GuessNumber}")
+        counter += 1
+    elif GuessNumber < RN: #check whether less than Guess Number Random number
+         print(f"Your Guess Number Less than RN: {GuessNumber}")
+         counter += 1
+    elif GuessNumber == RN and counter <= 10: #check whether equality Guess Number Random number
+        print(f"Congratulations. You Guessed the Number! {GuessNumber}")
+        print(f"Either you know the secret or you got lucky: {counter}")
+        Answer =  input("Do you want to play again (Y/N):") # Ask to player whether to play again
+
+    elif GuessNumber == RN and counter > 10:
+        print(f"Congratulations. You Guessed the Number! {GuessNumber}")
+        print(f"You should able to do better: {counter}")
+        Answer =  input("Do you want to play again (Y/N):") # Ask to player whether to play again
+
+        if Answer == 'Y': # Check asnwer whether to play again
+            RN = random.randrange(1,1000) #again generate different random number
+            count = 0
+            if GuessNumber > RN: #check whether greater than Guess Number Random number
+                print(f"Your Guess Number Bigger than RN: {GuessNumber}")
+                count += 1
+            elif GuessNumber < RN: #check whether less than Guess Number Random number
+                print(f"Your Guess Number Less than RN: {GuessNumber}")
+                count+= 1
+            elif GuessNumber == RN and  count <= 10 :
+                print(f"Congratulations. You Guessed the Number! {GuessNumber}") #  #check whether equality Guess Number Random number and ask again whether to play
+                print(f"Either you know the secret or you got lucky: { count }")
+                Answer =  input("Do you want to play again (Y/N):")
+            elif GuessNumber == RN and  count > 10:
+                print(f"Congratulations. You Guessed the Number! {GuessNumber}")
+                print(f"You should able to do better: {count}")
+                Answer =  input("Do you want to play again (Y/N):") # Ask to player whether to play again
+
+print("Thanks for playing....") # end message
+
+
+
+         
+     
+
