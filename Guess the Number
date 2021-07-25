@@ -1,0 +1,30 @@
+import random 
+
+RN = random.randrange(1,1000) # Generate between 1 to 1000
+
+GuessNumber = int(input("Guess to number: ")) # Number of Guess
+
+Answer = 'Y' # Answer 
+
+while Answer != 'N': # Check the loop
+    GuessNumber = int(input("Guess to number: ")) # Answer Number of guess
+    
+    if GuessNumber > RN: # check whether greater than Guess Number Random number
+        print(f"Your Guess Number Bigger than RN: {GuessNumber}")
+    elif GuessNumber < RN: #check whether less than Guess Number Random number
+         print(f"Your Guess Number Less than RN: {GuessNumber}")
+    elif GuessNumber == RN: #check whether equality Guess Number Random number
+        print(f"Congratulations. You Guessed the Number! {GuessNumber}")
+        Answer =  input("Do you want to play again (Y/N):") # Ask to player whether to play again
+        
+        if Answer == 'Y': # Check asnwer whether to play again
+            RN = random.randrange(1,1000) #again generate different random number
+            if GuessNumber > RN: #check whether greater than Guess Number Random number
+                print(f"Your Guess Number Bigger than RN: {GuessNumber}")
+            elif GuessNumber < RN: #check whether less than Guess Number Random number
+                print(f"Your Guess Number Less than RN: {GuessNumber}")
+            else:
+                print(f"Congratulations. You Guessed the Number! {GuessNumber}") #  #check whether equality Guess Number Random number and ask again whether to play
+                Answer =  input("Do you want to play again (Y/N):")
+
+print("Thanks for playing....") # end message
