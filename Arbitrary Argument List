@@ -1,0 +1,12 @@
+def productmultiply(arg1, *args):
+""" Function calculate the product multiply number of elements"""
+
+  ProductM = 1
+  
+  for i in args:
+    Product = arg1 * i
+    ProductM *= Product
+    print(f"Product Multiply {arg1} and {args} = {ProductM}")
+  return ProductM
+  
+  
