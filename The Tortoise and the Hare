@@ -1,0 +1,78 @@
+
+import random 
+
+TurtleSquare = 0
+def tartoise():
+    RN = random.randint(1,10)
+
+    if RN in(1, 2, 3, 4, 5):
+        print("3 Squares to the right")
+        
+    elif RN in(6, 7):
+        print("6 Squares to the left")
+        
+    else:
+        print("1 Squares to the right")
+        
+
+
+RabbitSquare = 0
+def hare():
+    RandN = random.randint(1,10)
+
+    if RandN in (1, 2):
+        print("No move at all because hare is sleeping..")
+       
+    elif RandN in (3, 4):
+        print("9 Squares to the right")
+        
+    elif RandN in (9, 10):
+        print("2 Squares to the left")
+        
+    elif RandN in (6, 7, 8):
+        print("1 Squares to the right")
+    
+    else:
+         print("12 Squares to the left")
+         
+
+
+turtle = tartoise()
+rabbit = hare()
+
+for i in range(1,71):
+    Square = random.randint(1,10)
+    if Square in (1, 2, 3, 4, 5):
+        TurtleSquare += 3
+        print("T")
+    if Square in (1,2):
+        RabbitSquare += 0
+        print("R")
+    elif Square in (6, 7):
+        TurtleSquare += 6
+        print("T")
+    elif Square in (3, 4):
+        RabbitSquare += 9
+        print("R")
+    elif Square in (8, 9, 10):
+        TurtleSquare += 1
+        print("T")
+    elif Square in (9, 10):
+        RabbitSquare += 2
+        print("R")
+    elif Square in(6, 7, 8):
+        RabbitSquare += 1
+        print("R")
+    elif Square == 5:
+        RabbitSquare += 12
+        print("R")
+
+while TurtleSquare and RabbitSquare != 1:
+    if RabbitSquare == TurtleSquare:
+        print("Ouchh")
+    elif RabbitSquare >= 70 and TurtleSquare < 70:
+        print("Turtle lost")
+        break
+    else:
+        print("Rabitt lost")
+        break
