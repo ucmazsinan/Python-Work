@@ -1,0 +1,56 @@
+
+Answer = 0
+import random
+def choice(level):
+    global Answer
+    if level == 1:
+        Number1 = random.randint(1,9)
+        Number2 = random.randint(1,9)
+        Answer = Number1 * Number2
+        Ask = print(f" How much is {Number1} times  {Number2}?")
+    elif level == 2:
+        Number1 = random.randint(10, 99)
+        Number2 = random.randint(10, 99)
+        Ask = print(f" How much is {Number1} times  {Number2}?")
+        Answer = Number1 * Number2
+    return level
+
+
+choices = choice(int(input("Whats your Choice ?  <<1 / 2>>: ")))
+
+
+def calculate():
+        if choices == 1:
+            while True:
+
+                StudentAnswer = int(input("What's Your Answer:"))
+                if StudentAnswer == Answer:
+                    WellDone = ["Very Good!", "Nice Work!", "Keep Up the Good Work!"]
+                    messages1 = random.choice(WellDone)
+                    print(messages1)
+                    break
+                elif StudentAnswer != Answer:
+                    Motivation =  ["Wrong. Try  Once More", "No. Keep Trying", "No. Please Try Again"]
+                    messages2 = random.choice(Motivation)
+                    print(messages2)
+        elif choices == 2:
+                while True:
+
+                    StudentAnswer = int(input("What's Your Answer:"))
+                    if StudentAnswer == Answer:
+                        WellDone = ["Very Good!", "Nice Work!", "Keep Up the Good Work!"]
+                        messages1 = random.choice(WellDone)
+                        print(messages1)
+                        break
+                    elif StudentAnswer != Answer:
+                        Motivation = ["Wrong. Try  Once More", "No. Keep Trying", "No. Please Try Again"]
+                        messages2 = random.choice(Motivation)
+                        print(messages2)
+
+
+def main():
+    print("Functions Ask and  Calculate 2 level multiply product.")
+    calculate()
+
+main()
+
