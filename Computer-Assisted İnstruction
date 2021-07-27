@@ -1,0 +1,31 @@
+import random
+
+Answer = 0
+
+
+def multiplie(): # Generate a random and print to question.
+    global Answer
+    random.seed()
+    number1 = random.randint(1,10)
+    number2 = random.randint(1,10)
+    Answer = number1 * number2
+    print(f"How much is {number1} times {number2}?")
+
+
+
+StudentName = input("Whats your Answer: ") # introduce student
+print(f"Hello {StudentName}")
+
+while True: # loop
+    Ask = multiplie() #call function as Ask
+    StudentAnswer = int(input("Whats your Answer:")) # student enter a answer
+    if StudentAnswer != Answer: # first control if answer not equal question answer
+        Motivation = ["Wrong. Try  Once More", "No. Keep Trying", "No. Please Try Again"]
+        message1 = random.choice(Motivation)
+        print(message1)
+    elif StudentAnswer == Answer: #Student asnwer equal Question answer terminate loop.
+        WellDone = ["Very Good!", "Nice Work!", "Keep Up the Good Work!"]
+        message2 = random.choice(WellDone)
+        print(message2)
+        break
+
