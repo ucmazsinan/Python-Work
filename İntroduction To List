@@ -1,0 +1,91 @@
+---------------------------------------Examples---------------------------------------------------------------------------
+
+
+
+
+
+
+MyList = [-45, -30, -15, 15, 30, 45]
+
+print(f"List First Element: {MyList[0] } or {MyList[-6]}")
+
+print(f"List Last Element: {MyList[5] } or {MyList[-1]}")
+
+AnyIndex = 1 #refers to First element at list
+
+AnyIndex2 = 4 # Refers to Fourth element at list
+
+print(f"Mylist element {MyList[AnyIndex]} + {MyList[AnyIndex2]} = {MyList[AnyIndex] + MyList[AnyIndex2]}")
+
+print(f"MyList Before index 3: {MyList[3]} ")
+
+MyList[3] = 20
+
+print(f"After changing the elements : {MyList[3]}")
+
+s = 'hello'
+
+FE = s[0]
+
+print(f"First element in a string : {FE}")
+
+#s[0] = 'H'
+
+#print(f" Change first element in a string : {FE}")
+
+
+
+print(f"{MyList[2]} + {MyList[2]} + {MyList[4]} = {MyList[2] +  MyList[2] + MyList[4] }")
+
+
+Append_List = []
+
+for append in range(1,12,3):
+    Append_List += [append]
+
+print(f"My List : {Append_List}")
+
+letters = []
+
+letters += 'Python'
+
+print(f"String list : {letters}")
+
+ConcatenateList = MyList + letters + Append_List
+
+print(f"Concatenate List : {ConcatenateList}")
+
+for index in range(len(ConcatenateList)):
+    print(f'İndex:{index : >4}  Elements:{ConcatenateList[index] : >7}')
+
+
+
+
+
+
+
+
+----------------------------------------Exercises1-------------------------------------------------------------------------
+
+def cubelist(Values):
+    for index in range(len(Values)):
+        Values[index] **= 3
+    return Values
+
+
+
+ListValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(f"Cubes: {cubelist(ListValues)}")
+
+------------------------------------------Exercises2------------------------------------------------------------
+
+
+def MyList():
+    CharList = []
+    Messages = "Birthday"
+    CharList += Messages
+    print(CharList)
+
+MyList()
+
