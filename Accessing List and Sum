@@ -1,0 +1,21 @@
+Sum = 0
+Count = 0
+for row in range(len(t)):
+    for col in range(len(t[row])):
+        Sum += t[row][col]
+        Count += 1
+        print(f"t[{row}][{col}] = {t[row][col]}")
+print(f"Sum of the list elements: {Sum/Count:.2f}")
+
+
+-----------------------------------------------------------------
+
+count  = 0
+Sum = 0
+
+for row in t:
+    for col in row:
+        count += 1
+        Sum += col
+        
+-------------------------------------------------------------------------
