@@ -1,0 +1,23 @@
+"Creating List Existing True"
+MyList = [True for x in range(1000)] 
+
+"First Prime Number"
+P = 2 
+
+"Not Prime Number"
+MyList[0] = False
+MyList[1] = False
+
+"Multiplies P not Prime also others P  Multiplies (2, 3, 4, less than 1000 is going to calculate each times )"
+while(P * P < len(MyList)):
+    if MyList[P] == True:
+        for i in range(P * 2,len(MyList),P):
+            MyList[i] = False
+    P += 1
+
+"Print Numbers if My list True"
+for j in range(len(MyList)):
+    if MyList[j]:
+        print(j)
+
+
