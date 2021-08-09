@@ -1,0 +1,12 @@
+
+import numpy  as np
+
+def summarize_letters(text):
+     for i in np.unique(text):
+        print(f'{i} appears in Text List {text.count(i)} times in text')
+
+
+str = 'kakfkjanjkfnakjnfnafkjanfasjkf'.lower()
+
+summarize_letters(list(str))
+
