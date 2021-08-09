@@ -1,0 +1,15 @@
+'Palindrome Function Short way'
+def is_palindrome(text):
+    return text == text[::-1]
+'Creating list and Testing'
+str = ['radar', 'öYKü', '3113','sinan','RADAR','berk','BeLeMiR']
+palindromes = []
+for i in str:
+    check = is_palindrome(i.lower())
+    if check:
+        palindromes.append(i)
+        print(f'Palindromes List : {palindromes}')
+    else:
+        print(f"str[{i}] not palindrome")
+
+
