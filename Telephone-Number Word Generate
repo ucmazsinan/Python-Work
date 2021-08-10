@@ -1,0 +1,33 @@
+import random
+import itertools
+alphabet = []
+def generate_word(phnum=input('Whats Your Number:')):
+    global alphabet
+    for ch in phnum:
+        if ch in '2':
+            alphabet.append(random.choices('abc'))
+        if ch in '3':
+            alphabet.append(random.choices('def'))
+        if ch in '4':
+            alphabet.append(random.choices('ghi'))
+        if ch in '5':
+            alphabet.append(random.choices('jkl'))
+        if ch in '6':
+            alphabet.append(random.choices('mno'))
+        if ch in '7':
+            alphabet.append(random.choices('prs'))
+        if ch in '8':
+            alphabet.append(random.choices('tuv'))
+        if ch in '9':
+            alphabet.append(random.choices('wxy'))
+    sentence = ''
+    for index,row in enumerate(alphabet):
+        for jindex,item in enumerate(row):
+            sentence += item
+    return sentence
+
+phone = generate_word()
+def show_sentences():
+    print([''.join(MySentence) for MySentence in itertools.permutations(phone)])
+
+show_sentences()
