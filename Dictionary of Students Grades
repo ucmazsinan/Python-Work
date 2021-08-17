@@ -1,0 +1,21 @@
+
+"Students Grades "
+GradeBook = {'Fatih' : [65, 25, 35],
+             'Helin' : [3, 25, 45],
+              'Berk' : [65, 25, 36],
+             'Sinan': [65, 25, 86],
+             'Öykü' : [63, 25, 87],
+             'Belemir': [69, 85, 25]}
+"Total All Grades includes list contents"
+all_grades_total = 0
+"Number of counts all grades"
+all_grades_count = 0
+
+"Unpack dictionary to key and values "
+for key, value in GradeBook.items():
+    total= sum(value) "Total each list items"
+    print(f"Stundets Name : {key}, Average Grades : {total / len(value) :.2f}")
+    all_grades_total += total
+    all_grades_count += len(value)
+
+print(f"Class  Total Averages : {all_grades_total / all_grades_count: .2f}")
