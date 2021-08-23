@@ -1,0 +1,34 @@
+text = ('Seni bir yaz gününe benzetmek mi, ne gezer?'
+'Çok daha güzelsin sen, çok daha cana yakın:'
+'Taze tomurcukları sert rüzgârlar örseler,'
+'Kısacıktır süresi yeryüzünde bir yazın:'
+'Işıldar göğün gözü, yakacak kadar sıcak,'
+'Ve sık sık kararı da yaldız düşer yüzünden;'
+'Her güzel, güzellikten er geç yoksun kalacak'
+'Kader ya da varlığın bozulması yüzünden;'
+'Ama hiç solmayacak sendeki ölümsüz yaz,'
+'Güzelliğin yitmez ki asla olmaz ki hurda;'
+'Gölgesindesin diye ecel caka satamaz'
+'Sen çağları aşarken bu ölmez satırlarda:'
+'İnsanlar nefes alsın, gözler görsün elverir,'
+'Yaşadıkça şiirim, sana da hayat verir.')
+
+wordcont = {}
+duplicate_word = []
+for word in text.split():
+    if word in wordcont:
+        wordcont[word] += 1
+    else:
+        wordcont[word] = 1
+print(f'{"Words":<12}{"Counts":>12}')
+for words,Count in sorted(wordcont.items()):
+    print(f"{words:<12}{Count:>12}")
+for words in wordcont:
+    print(words, end = ' ')
+    duplicate_word.append(words)
+
+
+print(f'Number of length text: {len(text)}')
+print(f"number of unique words: {len(wordcont)}")
+
+
