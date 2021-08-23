@@ -1,0 +1,19 @@
+import string
+alphabet = set(string.ascii_lowercase)
+text = input('Giving a Sentence: ')
+CountLetter = {}
+
+for word in text.strip().split():
+    for letter in word.lower():
+        if letter in CountLetter:
+            CountLetter[letter] += 1
+        else:
+            CountLetter[letter] = 1
+
+SetOfString = set(CountLetter.keys())
+print(f"{'Letter':<12}Count")
+for Letter, Count in sorted(CountLetter.items()):
+    print(f"{Letter:<12}{Count}")
+
+print(f"alphabet {alphabet.difference(SetOfString)} not in the text \ntotal number of alphabet {len(alphabet.difference(SetOfString))}")
+print(f'Number of Unique Letters: {len(CountLetter)}')
