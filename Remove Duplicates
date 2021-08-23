@@ -1,0 +1,25 @@
+def removes_duplicate(MyList):
+    UniqueWords = set()
+    for i in sorted(MyList):
+        if i not in UniqueWords:
+            UniqueWords.add(i)
+    return sorted(UniqueWords)
+
+text = ('Seni bir yaz gününe benzetmek mi, ne gezer?'
+'Çok daha güzelsin sen, çok daha cana yakın:'
+'Taze tomurcukları sert rüzgârlar örseler,'
+'Kısacıktır süresi yeryüzünde bir yazın:'
+'Işıldar göğün gözü, yakacak kadar sıcak,'
+'Ve sık sık kararı da yaldız düşer yüzünden;'
+'Her güzel, güzellikten er geç yoksun kalacak'
+'Kader ya da varlığın bozulması yüzünden;'
+'Ama hiç solmayacak sendeki ölümsüz yaz,'
+'Güzelliğin yitmez ki asla olmaz ki hurda;'
+'Gölgesindesin diye ecel caka satamaz'
+'Sen çağları aşarken bu ölmez satırlarda:'
+'İnsanlar nefes alsın, gözler görsün elverir,'
+'Yaşadıkça şiirim, sana da hayat verir.')
+MyList = text.split()
+
+print(removes_duplicate(MyList))
+
