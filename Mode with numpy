@@ -1,0 +1,12 @@
+import numpy as np
+def mode(Arr):
+    Flatten = Arr.flatten()
+    SortedArr = np.sort(Flatten)
+    UniqueElement, Count = np.unique(SortedArr, return_counts = True)
+    DictMode = dict(zip(UniqueElement, Count))
+    Val = [val for val in DictMode.values()]
+    Key = [key for key in DictMode.keys()]
+    MostRepeated  = max(Val)
+    Position = Val.index(MostRepeated)
+    Mode = Key[Position]
+    print(f"Arrays Mode : { Mode}, Repeated Numbers: { MostRepeated}")
