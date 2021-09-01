@@ -1,0 +1,10 @@
+def median(MedianArr):
+    Flattened = MedianArr.flatten() # Flatten ndarray into one dimensional 
+    SortedArray = np.sort(Flattened) # Sorted one dimensional array
+    if len(SortedArray) % 2 == 0: # check length of array 
+        SumOfMiddle = SortedArray[ int( len(SortedArray) / 2) ] +  SortedArray[ (int( len(SortedArray) / 2)) - 1 ]  #array length is even
+        Median = SumOfMiddle / 2 #calculate median 
+    else:
+        Median = SortedArray[int( ( ( (len(SortedArray) + 1) / 2 ) - 1 ) )] # array length is odd  calculate median
+    return Median    
+
