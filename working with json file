@@ -1,0 +1,19 @@
+#Create a Dict   
+Grades_Dict = {'GradeBook' : [
+    {'Student_Id' : 1, 'Name' : 'Red', 'Grades' : 'A'},
+    {'Student_Id' : 2, 'Name' : 'Green', 'Grades' : 'B'},
+    {'Student_Id' : 3, 'Name' : 'White', 'Grades' : 'C'}
+    ]}
+
+Grades_Dict
+##### Serialization
+with open('Grades.json', mode  = 'w') as Grades:
+    json.dump(Grades_Dict, Grades)
+###De Serialization 
+with open('Grades.json', mode = 'r') as Grades:
+    GradesJson = json.load(Grades)
+    
+GradesJson
+####Pretty Printed 
+with open ('Grades.json', 'r') as Grades:
+    print(json.dumps(GradesJson, indent = 3))
