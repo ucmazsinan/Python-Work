@@ -1,0 +1,12 @@
+with open('Grades.txt',mode = 'w') as Grades:
+    Grades.write('Red A\n')
+    Grades.write('Green B \n')
+    Grades.write('While A\n')
+    
+
+with open('Grades.txt',mode = 'r') as Grades:
+    print(f'{"Student":<10}{"Grades":<10}')
+    for grades in Grades:
+        Student, Gradess = grades.split()
+        print(f'{Student:<10}{Gradess:<10}')
+    
