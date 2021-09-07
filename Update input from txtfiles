@@ -1,0 +1,33 @@
+Accounts = open ('Accounts.txt', mode = 'r')  
+Temp_File = open('Temp_File.txt', mode = 'w')
+
+with Accounts, Temp_File:
+    for record in Accounts:
+        Account, Name, Balance = record.split()
+        if Account != '300':
+            Temp_File.write(record)
+        else:
+            New_Record = ' '.join([Account, 'Williams', Balance])
+            Temp_File.write(New_Record + '\n')
+            
+
+import os 
+
+os.remove('Accounts.txt')
+
+os.rename('Temp_File', 'Accounts.txt')
+
+Accounts  = open('Accounts.txt', mode = 'r')
+Temp = open('Temp.txt', mode = 'w')
+
+with Accounts, Temp:
+    for changed in Accounts:
+        Account, Name, Balance = changed.split()
+        if Name != 'Doe':
+            Temp.write(changed)
+        else:
+            ChangedTo = ' '.join([Account, 'Smith', Balance])
+            Temp.write(ChangedTo + '\n')
+            
+os.remove('Accounts.txt')
+os.rename('Temp.txt','Accounts.txt')
