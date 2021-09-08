@@ -1,0 +1,9 @@
+try:
+    with open('Grade.txt', mode = 'r') as Grades:
+        print(f'{"Students":<10}{"Grades":<10}')
+        for record in Grades:
+            Students, Grades = record.split()
+            print(f'{Students:<10}{Grades:<10}')
+except FileNotFoundError:
+    print('The File Name You Specified Does Not Exitst')
+    
