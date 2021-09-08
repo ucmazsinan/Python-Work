@@ -1,0 +1,16 @@
+def try_it(value):
+    try:
+         int(value)
+    except ValueError:
+        print(f'Value Error Occured: You Should enter Numbers Not : {value}')
+    else:
+        print(f'{value} converts to {int(value)}')
+    finally:
+        print('Who am I ')
+    
+
+try_it('10.6')
+
+try_it('Python')
+
+try_it(23.5)
