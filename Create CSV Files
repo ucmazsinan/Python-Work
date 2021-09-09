@@ -1,0 +1,9 @@
+import csv
+##Open and Creating CSV
+with open('lessons.csv', mode = 'w', newline = '') as Lessons:
+    writer = csv.writer(Lessons)
+    writer.writerow([1,"Data Mining","6 Akts"])
+    writer.writerow([2,"Multivariate Statistical Analysis","7 Akts"])    
+    writer.writerow([3,"Time Series Analysis","6 Akts"])
+    writer.writerow([4,"Dynamic Model and Bayesian Forecasting","4 Akts"])
+    writer.writerow([5,"Bayesian Statistics","6 Akts"])
