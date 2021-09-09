@@ -1,0 +1,8 @@
+#Reading From CSV 
+
+with open('Lessons.csv',mode = 'r',newline = '') as Lessons:
+    print(f'{"ID":<10}{"Lesson":<10}{"Information ECTS":>10}')
+    Reader = csv.reader(Lessons)
+    for record in Reader:
+        Id, Lesson, Information = record
+        print(f'{Id:<10}{Lesson:<10}{Information:>10}')
