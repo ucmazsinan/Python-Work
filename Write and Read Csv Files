@@ -1,0 +1,12 @@
+with open('Grades.csv', mode = 'w', newline = '') as Grades:
+    writer = csv.writer(Grades)
+    writer.writerow([1,"Red","A"])
+    writer.writerow([2,"Green","B"])
+    writer.writerow([3,"White","A"])
+
+with open('Grades.csv', mode = 'r', newline = '') as Grades:
+    print(f'{"ID":<5}{"NAME":<5}{"GRADES":>5}')
+    Reader = csv.reader(Grades)
+    for record in Reader:
+        Id, Name, Grades = record
+        print(f'{Id:<5}{Name:<5}{Grades:>5}')
