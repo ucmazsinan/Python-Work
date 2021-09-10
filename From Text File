@@ -1,0 +1,18 @@
+with open('Grades.txt', mode = 'w') as Grades:
+    Grades.write("1 Data  89\n")
+    Grades.write("2 Bayesian  87\n")
+    Grades.write("3 Dynamic 97\n")
+    Grades.write("4 Time 95")
+Gradess = []
+with open('Grades.txt', mode = 'r') as Grades:
+    print(f'{"ID":<10}{"Students":<10}{"Grade":>10}')
+    for record in Grades:
+        Id, Student, Grade = record.split()
+        Gradess.append(Grade)
+        print(f'{Id:<10}{Student:<10}{Grade:>10}')
+
+SumGrades = 0
+for grades in Gradess:
+   SumGrades += float(grades)
+
+print(f'Average value for class:{SumGrades/len(Gradess)}')   
